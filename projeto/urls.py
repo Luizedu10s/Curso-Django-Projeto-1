@@ -1,13 +1,15 @@
-
+# MODULOS E PACOTES NECESSARIOS PARA O APP 
 
 from django.contrib import admin
 from django.http import HttpResponse
 from django.urls import path
+from recipes.views import my_view, home, about
 
-def my_view(request):
-    return HttpResponse("Hello, world!")
+# ROTAS DA APLICAÇÃO 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', my_view),
+    path('home/', home),
+    path('about/', about),
 ]
